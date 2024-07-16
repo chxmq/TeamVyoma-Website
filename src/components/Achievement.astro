@@ -1,0 +1,19 @@
+---
+const { heading, src } = Astro.props;
+---
+
+<div class="col-lg-4 col-sm-6">
+    <div class="item">
+        <div class="flex justify-center"><img
+            style="width: 250px"
+            src={src}
+            alt={heading}
+        /></div>
+
+        <h6>{heading}</h6>
+
+        <p>
+            <slot />
+        </p>
+    </div>
+</div>

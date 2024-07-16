@@ -1,0 +1,29 @@
+---
+const { name, src, title, twitter, instagram, linkedin } = Astro.props;
+---
+
+<div class="row">
+    <div class="card">
+        <div class="image flex flex-row justify-center">
+            <img
+                src={src}
+                alt={name}
+            />
+        </div>
+        <div class="info">
+            <h3>{name}</h3>
+            <span>{title}</span>
+            <div class="icons">
+                <a
+                    href={twitter}
+                    class="fab fa-twitter"></a>
+                <a
+                    href={instagram}
+                    class="fab fa-instagram"></a>
+                <a
+                    href={linkedin}
+                    class="fab fa-linkedin"></a>
+            </div>
+        </div>
+    </div>
+</div>

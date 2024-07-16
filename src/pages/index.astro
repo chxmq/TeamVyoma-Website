@@ -1,5 +1,9 @@
 ---
+import Achievement from "../components/Achievement.astro";
+import TeamMember from "../components/TeamMember.astro";
 import Layout from "../layouts/Layout.astro";
+import { achievements } from "../lib/achievements";
+import { teamMembers } from "../lib/team";
 ---
 
 <Layout>
@@ -19,8 +23,8 @@ import Layout from "../layouts/Layout.astro";
 	</header>
 
 	<section id="home" class="home">
-		<h1>TEAM VYOMA</h1>
-		<h2>Aeromodelling Club of RVCE</h2>
+		<h1 class="drop-shadow-lg">TEAM VYOMA</h1>
+		<h2 class="drop-shadow-md">Aeromodelling Club of RVCE</h2>
 		<div class="wave wave1"></div>
 		<div class="wave wave2"></div>
 		<div class="wave wave3"></div>
@@ -111,15 +115,6 @@ import Layout from "../layouts/Layout.astro";
 		</div>
 	</div>
 
-	<script
-		src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-		crossorigin="anonymous"></script>
-
 	<div class="pt-5 pb-5">
 		<div class="container">
 			<div class="row">
@@ -132,338 +127,41 @@ import Layout from "../layouts/Layout.astro";
 					</h4>
 				</div>
 
-				<div class="col-lg-4 col-sm-6">
-					<div class="item">
-						<!-- <span class="icon feature_box_col_four"><i class="fa fa-plane"></i></span> -->
-						<img
-							style="width: 250px"
-							src="./images/boeing.png"
-							alt="8th mile event"
-						/>
-
-						<h6>BOEING Aeromodelling IITM</h6>
-
-						<p>
-							Stood in the top 20 of the Boeing National
-							Aeromodelling Competition. This stands as a
-							testament to our relentless pursuit of excellence.<br
-							/><br /><br />
-						</p>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-sm-6">
-					<div class="item">
-						<!-- <span class="icon feature_box_col_five"><i class="fa fa-book"></i></span> -->
-						<img
-							style="width: 250px"
-							src="./images/wow.jpg"
-							alt="8th mile event"
-						/>
-
-						<h6>Wings of Wonder</h6>
-						<p>
-							Sowing the seeds of interest in aircrafts at a young
-							age, Wings of Wonder is a program aiming to expose
-							young students to the world of model aircraft.<br
-							/><br /><br />
-						</p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6">
-					<div class="item">
-						<img
-							style="width: 250px"
-							src="./images/aci.jpg"
-							alt="8th mile event"
-						/>
-						<h6>Air Crash Investigation</h6>
-						<p>
-							Our 8th mile event, a testament to the commitment to
-							safer skies, and an opportunity to fortify the
-							foundations of aviation safety worldwide<br /><br
-							/><br />
-						</p>
-					</div>
-				</div>
+				{achievements.map((achievement) => 
+					<Achievement
+						src={achievement.src}
+						heading={achievement.heading}
+					>
+						{achievement.description}
+					</Achievement>
+				)}
 			</div>
 		</div>
 	</div>
 
 	<div class="communicate">
 		<h3>Get in touch with us</h3>
-		<!-- <p>Lorem ipsum dolor sit amet.</p> -->
 		<a href="#contact"><button class="btn">Contact Now</button></a>
 	</div>
 
 	<a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
-	<script is:inline src="/lib/jquery/jquery.min.js"></script>
-	<script is:inline src="/lib/jquery/jquery-migrate.min.js"></script>
-	<script is:inline src="/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script is:inline src="/lib/easing/easing.min.js"></script>
-	<script is:inline src="/lib/waypoints/waypoints.min.js"></script>
-	<script is:inline src="/lib/counterup/counterup.min.js"></script>
-	<script is:inline src="/lib/owlcarousel/owl.carousel.min.js"></script>
-	<script is:inline src="/lib/lightbox/js/lightbox.min.js"></script>
 
 	<section class="team" style="margin-top: 7rem;">
 		<h1 class="heading" style="margin-top: -1.5rem;" id="team">Our team</h1>
 		<p></p>
-		<div class="row">
-			<div class="card">
-				<div class="image">
-					<img
-						src="./images/pexels-andrea-piacquadio-845434.jpg"
-						alt="Team member 1"
-					/>
-				</div>
-				<div class="info">
-					<h3>Prakhyath YB</h3>
-					<span>Team Lead</span>
-					<div class="icons">
-						<a
-							href="https://twitter.com/login"
-							class="fab fa-twitter"></a>
-						<a
-							href="https://www.instagram.com/prakhyath_yb980/"
-							class="fab fa-instagram"></a>
-						<a
-							href="https://www.linkedin.com/in/prakhyath-bhandary-939458240/"
-							class="fab fa-linkedin"></a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="card">
-				<div class="image">
-					<img
-						src="./images/pexels-vinicius-wiesehofer-1130624.jpg"
-						alt="Team member 1"
-					/>
-				</div>
-				<div class="info">
-					<h3>Sreevalli TS</h3>
-					<span>Team Lead</span>
-					<div class="icons">
-						<a
-							href="https://twitter.com/login"
-							class="fab fa-twitter"></a>
-						<a
-							href="https://www.instagram.com/sreevalli_221b/"
-							class="fab fa-instagram"></a>
-						<a
-							href="https://www.linkedin.com/in/sreevalli-seetha-ramu-9b0560229/"
-							class="fab fa-linkedin"></a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="card">
-				<div class="image">
-					<img
-						src="./images/pexels-hussein-altameemi-2776353.jpg"
-						alt="Team member 1"
-					/>
-				</div>
-				<div class="info">
-					<h3>Gautam M</h3>
-					<span>Design Head</span>
-					<div class="icons">
-						<a
-							href="https://twitter.com/login"
-							class="fab fa-twitter"></a>
-						<a
-							href="https://www.instagram.com/"
-							class="fab fa-instagram"></a>
-						<a
-							href="https://www.linkedin.com/in/gautam-m-8a4a27225/"
-							class="fab fa-linkedin"></a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="card">
-				<div class="image">
-					<img
-						src="./images/pexels-andrea-piacquadio-745136.jpg"
-						alt="Team member 1"
-					/>
-				</div>
-				<div class="info">
-					<h3>Nikhil Bharadwaj</h3>
-					<span>Aerodynamics and Finance Head</span>
-					<div class="icons">
-						<a
-							href="https://twitter.com/login"
-							class="fab fa-twitter"></a>
-						<a
-							href="https://www.instagram.com/"
-							class="fab fa-instagram"></a>
-						<a
-							href="https://www.linkedin.com/in/nikhil-bharadwaj-01a611223/"
-							class="fab fa-linkedin"></a>
-					</div>
-				</div>
-			</div>
-		</div>
 
-		<div class="row">
-			<div class="card">
-				<div class="image">
-					<img
-						src="./images/pexels-andrea-piacquadio-745136.jpg"
-						alt="Team member 1"
-					/>
-				</div>
-				<div class="info">
-					<h3>Chyawan C</h3>
-					<span>Avionics Head</span>
-					<div class="icons">
-						<a
-							href="https://twitter.com/login"
-							class="fab fa-twitter"></a>
-						<a
-							href="https://www.instagram.com/"
-							class="fab fa-instagram"></a>
-						<a
-							href="https://www.linkedin.com/in/chyawan-chandrashekar-709469261/"
-							class="fab fa-linkedin"></a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="card">
-				<div class="image">
-					<img
-						src="./images/pexels-andrea-piacquadio-745136.jpg"
-						alt="Team member 1"
-					/>
-				</div>
-				<div class="info">
-					<h3>Adithya DR</h3>
-					<span>Flight Test Head</span>
-					<div class="icons">
-						<a
-							href="https://twitter.com/login"
-							class="fab fa-twitter"></a>
-						<a
-							href="https://www.instagram.com/"
-							class="fab fa-instagram"></a>
-						<a
-							href="https://www.linkedin.com/in/adithya-d-r-979119240/"
-							class="fab fa-linkedin"></a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="card">
-				<div class="image">
-					<img
-						src="./images/pexels-andrea-piacquadio-745136.jpg"
-						alt="Team member 1"
-					/>
-				</div>
-				<div class="info">
-					<h3>Siddharth Varshney</h3>
-					<span>Web Development Head</span>
-					<div class="icons">
-						<a
-							href="https://twitter.com/login"
-							class="fab fa-twitter"></a>
-						<a href="https://instagram.com" class="fab fa-instagram"
-						></a>
-						<a
-							href="https://www.linkedin.com/in/siddharth-varshney-385a42244/"
-							class="fab fa-linkedin"></a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="card">
-				<div class="image">
-					<img
-						src="./images/pexels-andrea-piacquadio-745136.jpg"
-						alt="Team member 1"
-					/>
-				</div>
-				<div class="info">
-					<h3>Ashrith P Jain</h3>
-					<span>Sponsorship Head</span>
-					<div class="icons">
-						<a
-							href="https://twitter.com/login"
-							class="fab fa-twitter"></a>
-						<a
-							href="https://www.instagram.com/"
-							class="fab fa-instagram"></a>
-						<a
-							href="https://www.linkedin.com/in/ashrithjain/"
-							class="fab fa-linkedin"></a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="card">
-				<div class="image">
-					<img
-						src="./images/pexels-andrea-piacquadio-745136.jpg"
-						alt="Team member 1"
-					/>
-				</div>
-				<div class="info">
-					<h3>Lakshmi Manasa</h3>
-					<span>Marketing Head</span>
-					<div class="icons">
-						<a
-							href="https://twitter.com/login"
-							class="fab fa-twitter"></a>
-						<a
-							href="https://www.instagram.com/"
-							class="fab fa-instagram"></a>
-						<a
-							href="https://www.linkedin.com/"
-							class="fab fa-linkedin"></a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="card">
-				<div class="image">
-					<img
-						src="./images/pexels-andrea-piacquadio-745136.jpg"
-						alt="Team member 1"
-					/>
-				</div>
-				<div class="info">
-					<h3>Solomon Dcosta</h3>
-					<span>Inventory and Procurement Head</span>
-					<div class="icons">
-						<a
-							href="https://twitter.com/login"
-							class="fab fa-twitter"></a>
-						<a
-							href="https://www.instagram.com/"
-							class="fab fa-instagram"></a>
-						<a
-							href="https://www.linkedin.com/"
-							class="fab fa-linkedin"></a>
-					</div>
-				</div>
-			</div>
-		</div>
+		{
+			teamMembers.map((member) => (
+				<TeamMember
+					name={member.name}
+					src={member.src}
+					title={member.title}
+					twitter={member.twitter}
+					instagram={member.instagram}
+					linkedin={member.linkedin}
+				/>
+			))
+		}
 	</section>
 
 	<section id="contact" class="contact">
@@ -519,67 +217,6 @@ import Layout from "../layouts/Layout.astro";
 			</form>
 		</div>
 	</div>
-
-	<!-- <section class="faq">
-      <h1 class="heading" style="margin-top: -2rem; color: #00bfff;" id="faq">FAQ</h1>
-      <div class="row">
-          <div class="accordion-container">
-              <div class="accordion">
-                  <div class="accordion-header">
-                      <span>+</span>
-                      <h3>How much will it cost?</h3>
-                  </div>
-                  <div class="accordion-body">
-                      <p>To get a better idea of the cost of what you want to build, give us a quick phone call. We’ll ask you a few questions about the nature of the site, what sort of interactivity the site will have, your graphic design needs, etc. 
-                          Then we’ll be able to give you a ballpark figure. 
-                          If you’re still interested, we’ll come to your place of business and come up with a firm quote.</p>
-                  </div>
-              </div>
-              <div class="accordion">
-                  <div class="accordion-header">
-                      <span>+</span>
-                      <h3>How long it takes to design?</h3>
-                  </div>
-                  <div class="accordion-body">
-                      <p>The time limit of any assignment is normally dictated by the client. If you have any time limit in mind we will attempt to assemble it for you. 
-                          The main general delay in the making of a website is waiting for the content of the pages to be sent to us by the client.</p>
-                  </div>
-              </div>
-              <div class="accordion">
-                  <div class="accordion-header">
-                      <span>+</span>
-                      <h3>How do I associate with IT Company?</h3>
-                  </div>
-                  <div class="accordion-body">
-                      <p>The process begins when you contact us with your requirements. We analyze your requirements and respond to you. 
-                          On the basis of the further discussion, you can choose an engagement model that suits you the best. 
-                          After that, we begin the process of development.</p>
-                  </div>
-              </div>
-              <div class="accordion">
-                  <div class="accordion-header">
-                      <span>+</span>
-                      <h3>Can you help my current site look more professional?</h3>
-                  </div>
-                  <div class="accordion-body">
-                      <p>Yes. Give us your requirements and we have experienced expertise to help you give a 
-                          new professional look that really wonders!</p>
-                  </div>
-              </div>
-              <div class="accordion">
-                  <div class="accordion-header">
-                      <span>+</span>
-                      <h3>When do I pay?</h3>
-                  </div>
-                  <div class="accordion-body">
-                      <p>For most projects, equal payments are made at the start, midway, and the end of the project, but we can work with you to set up a schedule that meets your needs. 
-                          We understand that this is a big investment and want to help you budget for the expense in whatever way possible.
-                          We accept checks, PayPal, and all major credit cards.</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section> -->
 
 	<div class="footer">
 		<div class="footer-top">
@@ -639,7 +276,6 @@ import Layout from "../layouts/Layout.astro";
 						</p>
 
 						<div class="social-links">
-							<!-- <a href="https://www.facebook.com/"><i class="ion-logo-facebook"></i></a> -->
 							<a href="https://x.com/projectvyoma"
 								><i class="ion-logo-twitter"></i></a
 							>
@@ -650,7 +286,6 @@ import Layout from "../layouts/Layout.astro";
 							<a href="https://www.instagram.com/teamvyoma"
 								><i class="ion-logo-instagram"></i></a
 							>
-							<!-- <a href="https://accounts.google.com/servicelogin/signinchooser?flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i class="ion-logo-googleplus"></i></a> -->
 						</div>
 					</div>
 				</div>
