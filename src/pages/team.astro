@@ -1,0 +1,25 @@
+---
+import TeamMember from "../components/TeamMember.astro";
+import Layout from "../layouts/Layout.astro";
+import { teamMembers } from "../lib/team";
+---
+
+<Layout>
+    <section class="team" style="margin-top: 7rem;">
+		<h1 class="heading" style="margin-top: -1.5rem;">TEAM</h1>
+		<p></p>
+
+		{
+			teamMembers.map((member) => (
+				<TeamMember
+					name={member.name}
+					src={member.src}
+					title={member.title}
+					twitter={member.twitter}
+					instagram={member.instagram}
+					linkedin={member.linkedin}
+				/>
+			))
+		}
+	</section>
+</Layout>

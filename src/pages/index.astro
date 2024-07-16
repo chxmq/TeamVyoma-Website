@@ -1,30 +1,13 @@
 ---
 import Achievement from "../components/Achievement.astro";
-import TeamMember from "../components/TeamMember.astro";
 import Layout from "../layouts/Layout.astro";
 import { achievements } from "../lib/achievements";
-import { teamMembers } from "../lib/team";
 ---
 
 <Layout>
-	<header class="header">
-		<a href="#" class="logo"><img src="/images/image.png" alt="" /></a>
-		<div class="fas fa-bars"></div>
-		<nav class="navbar">
-			<ul>
-				<li><a href="#home">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#service">Projects</a></li>
-				<li><a href="#achievements">Achievements</a></li>
-				<li><a href="#team">Team</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
-
-	<section id="home" class="home">
-		<h1 class="drop-shadow-lg">TEAM VYOMA</h1>
-		<h2 class="drop-shadow-md">Aeromodelling Club of RVCE</h2>
+	<section id="home" class="flex flex-col flex-wrap justify-center items-center text-center overflow-hidden py-4 min-h-screen w-full text-white home">
+		<h1 class="text-9xl drop-shadow-lg">TEAM VYOMA</h1>
+		<h2 class="text-5xl drop-shadow-md">Aeromodelling Club of RVCE</h2>
 		<div class="wave wave1"></div>
 		<div class="wave wave2"></div>
 		<div class="wave wave3"></div>
@@ -139,30 +122,10 @@ import { teamMembers } from "../lib/team";
 		</div>
 	</div>
 
-	<div class="communicate">
-		<h3>Get in touch with us</h3>
-		<a href="#contact"><button class="btn">Contact Now</button></a>
+	<div class="text-center items-center bg-[url(../images/bg2.png)] bg-no-repeat bg-cover bg-fixed text-white min-h-[35vh] px-5 py-10">
+		<h3 class="mt-12 text-5xl">Get in touch with us</h3>
+		<a href="#contact" class="hover:text-sky-600"><button class="bg-white text-2xl cursor-pointer h-14 w-60 shadow-md rounded-full border-indigo-950 text-indigo-950 hover:text-sky-500">Contact Now</button></a>
 	</div>
-
-	<a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
-
-	<section class="team" style="margin-top: 7rem;">
-		<h1 class="heading" style="margin-top: -1.5rem;" id="team">Our team</h1>
-		<p></p>
-
-		{
-			teamMembers.map((member) => (
-				<TeamMember
-					name={member.name}
-					src={member.src}
-					title={member.title}
-					twitter={member.twitter}
-					instagram={member.instagram}
-					linkedin={member.linkedin}
-				/>
-			))
-		}
-	</section>
 
 	<section id="contact" class="contact">
 		<h1 class="heading">Get in touch</h1>
@@ -217,92 +180,4 @@ import { teamMembers } from "../lib/team";
 			</form>
 		</div>
 	</div>
-
-	<div class="footer">
-		<div class="footer-top">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-4 col-md-6 footer-links">
-						<h4>About Us</h4>
-						<ul>
-							<li>
-								<i class="ion-ios-arrow-forward"></i>
-								<a href="#">Home</a>
-							</li>
-							<li>
-								<i class="ion-ios-arrow-forward"></i>
-								<a href="#about">About us</a>
-							</li>
-						</ul>
-					</div>
-
-					<div class="col-lg-4 col-md-6 footer-links">
-						<h4>Useful Links</h4>
-						<ul>
-							<li>
-								<i class="ion-ios-arrow-forward"></i>
-								<a href="#portfolio">Achievements</a>
-							</li>
-							<li>
-								<i class="ion-ios-arrow-forward"></i>
-								<a href="#team">Team</a>
-							</li>
-							<li>
-								<i class="ion-ios-arrow-forward"></i>
-								<a href="#contact">Contact</a>
-							</li>
-							<li>
-								<i class="ion-ios-arrow-forward"></i>
-								<a href="#faq">FAQ</a>
-							</li>
-						</ul>
-					</div>
-
-					<div
-						class="col-lg-4 col-md-6 footer-contact"
-						style="font-size: 1.5rem; text-transform: none;"
-					>
-						<h4>Contact Us</h4>
-						<p>
-							RV College of Engineering<br />
-							Pattanagere, Mysuru road<br />
-							Bangalore, Karnataka, 560059 <br />
-							<strong>Phone:</strong> 999999999<br />
-							<strong>Email:</strong>
-							<span
-								style="font-family: monospace; text-transform: none;"
-								>teamvyoma.ae@rvce.edu.in</span
-							><br />
-						</p>
-
-						<div class="social-links">
-							<a href="https://x.com/projectvyoma"
-								><i class="ion-logo-twitter"></i></a
-							>
-							<a
-								href="https://www.linkedin.com/company/team-vyoma"
-								><i class="ion-logo-linkedin"></i></a
-							>
-							<a href="https://www.instagram.com/teamvyoma"
-								><i class="ion-logo-instagram"></i></a
-							>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="container">
-			<div class="row align-items-center">
-				<div
-					class="col-md-6 copyright"
-					style="color: #fff; font-size: 1.3rem;"
-				>
-					Copyright &copy; 2015 Team Vyoma. All Rights Reserved.
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
 </Layout>

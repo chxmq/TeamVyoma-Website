@@ -7,25 +7,15 @@
 
 * {
     font-family: 'Aeronaut', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     transition: all .2s linear;
-    text-decoration: none;
 }
 
 html {
     font-size: 62.5%;
 }
 
-body {
-    overflow-x: hidden;
-}
-
 .heading,
-.clients .section-header h2,
 .section-head h1,
-.testimonials .section-header h2,
 .section-head-1 h4 {
     margin: 2rem;
     padding-top: 6rem;
@@ -38,41 +28,27 @@ body {
 
 .heading::before,
 .heading::after,
-.clients .section-header h2::before,
-.clients .section-header h2::after,
 .section-head h1::before,
 .section-head h1::after,
-.testimonials .section-header h2::before,
-.testimonials .section-header h2::after,
 .section-head-1 h4::before,
 .section-head-1 h4::after {
     content: '';
     position: absolute;
     height: 2.5rem;
     width: 2.5rem;
-    border-top: .4rem solid white;
-    border-left: .4rem solid white;
-}
-
-.faq .heading::before,
-.faq .heading::after {
-    border-top: .4rem solid #00bfff;
-    border-left: .4rem solid #00bfff;
+    /* border-top: .4rem solid white;
+    border-left: .4rem solid white; */
 }
 
 .heading::before,
-.clients .section-header h2::before,
 .section-head h1::before,
-.testimonials .section-header h2::before,
 .section-head-1 h4::before {
     top: 5.8rem;
     left: -2rem;
 }
 
 .heading::after,
-.clients .section-header h2::after,
 .section-head h1::after,
-.testimonials .section-header h2::after,
 .section-head-1 h4::after {
     bottom: -.5rem;
     right: -2rem;
@@ -93,32 +69,11 @@ body {
     box-shadow: 0 .2rem .5rem rgba(0, 0, 0, .3);
 }
 
-.communicate .btn {
-    outline: none;
-    border: none;
-    border-radius: 5rem;
-    background: white;
-    border-style: groove;
-    border-color: #002e5f;
-    font-size: 1.5rem;
-    cursor: pointer;
-    height: 3.5rem;
-    width: 15rem;
-    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, .3);
-}
-
 .row .btn:hover {
     letter-spacing: .1rem;
     opacity: .9;
     color: white;
     background: #002e5f;
-}
-
-.communicate .btn:hover {
-    letter-spacing: .1rem;
-    opacity: .9;
-    color: white;
-    background: #00bfff;
 }
 
 .header {
@@ -173,31 +128,11 @@ body {
 }
 
 .home {
-    min-height: 100vh;
-    width: 100vw;
     background-image: url(../images/img1.jpg);
     background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
-    text-align: center;
-    padding: 0 1rem;
-    position: relative;
-    overflow: hidden !important;
 }
 
-.home h1 {
-    color: #fff;
-    font-size: 8rem;
-}
-
-.home h2 {
-    color: #fff;
-    font-size: 3rem;
-}
-
-.home .wave {
+.wave {
     position: absolute;
     bottom: -.5rem;
     left: 0;
@@ -209,13 +144,13 @@ body {
     background-repeat: repeat-x;
 }
 
-.home .wave2 {
+.wave2 {
     animation-direction: reverse;
     animation-duration: 6s;
     opacity: .3;
 }
 
-.home .wave3 {
+.wave3 {
     animation-duration: 4s;
     opacity: .5;
 }
@@ -425,7 +360,7 @@ body {
 }
 
 .item {
-    background: #fff;
+    background: #aaa;
     text-align: center;
     padding: 30px 25px;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.07);
@@ -515,143 +450,6 @@ body {
     /* color:#2f2f2f; */
 }
 
-.communicate {
-    text-align: center;
-    align-items: center;
-    background-image: url(../images/bg2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    color: #fff;
-    min-height: 35vh;
-    padding: 40px 20px;
-}
-
-.communicate h3 {
-    margin-top: 3rem;
-    font-size: 3rem;
-}
-
-.communicate p {
-    font-size: 2rem;
-}
-
-.testimonials {
-    position: relative;
-    padding: 90px 0 60px 0;
-    background: #f2f2f2;
-}
-
-.testimonials .testimonial-item {
-    position: relative;
-    margin: 0 15px 30px 15px;
-    background: #ffffff;
-}
-
-.testimonials .testimonial-img {
-    position: relative;
-    background: #000000;
-    overflow: hidden;
-}
-
-.testimonials .testimonial-text {
-    position: relative;
-    width: 100%;
-    padding: 30px 15px;
-    text-align: center;
-    background: #ffffff;
-}
-
-.testimonials .testimonial-text h3 {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.testimonials .testimonial-text h4 {
-    font-size: 12px;
-    font-weight: 300;
-    text-transform: uppercase;
-}
-
-.testimonials .testimonial-text p {
-    margin: 0;
-    font-size: 16px;
-    font-weight: 300;
-}
-
-.testimonials .owl-nav,
-.testimonials .owl-dots {
-    margin-top: 5px;
-    text-align: center;
-}
-
-.testimonials .owl-dot {
-    display: inline-block;
-    margin: 0 5px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #dddddd;
-}
-
-.testimonials .owl-dot.active {
-    background-color: #4F84C4;
-}
-
-@media (max-width: 575px) {
-    .testimonials .testimonial-text {
-        padding: 25px;
-    }
-}
-
-.clients {
-    position: relative;
-    padding: 90px 0;
-    text-align: center;
-    margin-top: -10rem;
-    margin-bottom: -10rem;
-}
-
-.clients .section-header p {
-    padding-bottom: 10px;
-    margin-top: 2.5rem;
-    text-align: center;
-    font-size: 2rem;
-    color: #333;
-    padding: 1rem 0;
-}
-
-.clients img {
-    max-width: 100%;
-    opacity: 1;
-    transition: 0.3s;
-    padding: 15px 0;
-}
-
-.clients img:hover {
-    opacity: .5;
-}
-
-.clients .owl-nav,
-.clients .owl-dots {
-    margin-top: 5px;
-    text-align: center;
-}
-
-.clients .owl-dot {
-    display: inline-block;
-    margin: 0 5px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #ddd;
-}
-
-.clients .owl-dot.active {
-    background-color: #4F84C4;
-}
-
 .team {
     min-width: 100vw;
     min-height: 95vh;
@@ -678,7 +476,7 @@ body {
 .team .row .card {
     height: 35rem;
     width: 25rem;
-    background-color: #fff;
+    background-color: #555;
     text-align: center;
     margin: 5rem 5rem;
     position: relative;
@@ -1043,103 +841,6 @@ body {
     }
 }
 
-.back-to-top {
-    position: fixed;
-    display: none;
-    background-color: #00bfff;
-    color: #ffffff;
-    width: 45px;
-    height: 45px;
-    text-align: center;
-    line-height: 1;
-    font-size: 44px;
-    right: 15px;
-    bottom: 15px;
-    transition: background 0.3s;
-    z-index: 9;
-}
-
-.back-to-top i {
-    color: #ffffff;
-}
-
-.back-to-top i:hover {
-    color: black;
-}
-
-.faq {
-    min-height: 70vh;
-    width: 100vw;
-    text-align: center;
-    padding: 0 2rem;
-    background: url(../images/faq.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.faq .row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 2rem;
-}
-
-.faq .row .accordion-container {
-    width: 50%;
-    text-align: left;
-}
-
-.faq .row .accordion {
-    margin-left: 1rem;
-    margin-right: 2rem;
-}
-
-.faq .row .accordion-container .accordion .accordion-header {
-    background-color: #00bfff;
-    margin: 1rem 0;
-    box-shadow: .1rem .1rem .3rem rgba(0, 0, 0, .3);
-    cursor: pointer;
-    margin-left: 1rem;
-    margin-right: 2rem;
-}
-
-.faq .row .accordion-container .accordion .accordion-header span {
-    display: inline-block;
-    text-align: center;
-    height: 4rem;
-    width: 5rem;
-    line-height: 4rem;
-    font-size: 2rem;
-    background: #333;
-    color: #fff;
-    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-}
-
-.faq .row .accordion-container .accordion .accordion-header h3 {
-    display: inline;
-    color: #333;
-    font-weight: 400;
-    padding-left: .5rem;
-    font-size: 1.5rem;
-}
-
-.faq .row .accordion-container .accordion .accordion-body {
-    padding: 1rem;
-    color: #444;
-    box-shadow: .1rem .1rem .3rem rgba(0, 0, 0, .3);
-    background-color: #fff;
-    font-size: 1.3rem;
-    display: none;
-    margin-left: 1rem;
-    margin-right: 2rem;
-}
-
-@media (max-width: 1200px) {
-    .faq {
-        min-height: 70vh;
-    }
-}
-
 @media (max-width: 1000px) {
     html {
         font-size: 50%;
@@ -1195,16 +896,6 @@ body {
 
     .header .nav-toggle {
         top: 5.8rem;
-    }
-
-    .home h1 {
-        color: #fff;
-        font-size: 4rem;
-    }
-
-    .home h2 {
-        color: #fff;
-        font-size: 2rem;
     }
 
     .about {
@@ -1392,25 +1083,5 @@ body {
     .contact-form-phone::placeholder {
         color: #aaa;
         font-size: 1.5rem;
-    }
-
-    .back-to-top {
-        width: 30px;
-        height: 30px;
-        font-size: 30px;
-    }
-
-    .faq {
-        padding: 0;
-        min-height: 60vh;
-    }
-
-    .faq .row {
-        padding: 0 1.5rem;
-        flex-flow: column;
-    }
-
-    .faq .row .accordion-container {
-        width: 100%;
     }
 }

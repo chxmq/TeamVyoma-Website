@@ -1,3 +1,8 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +10,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Vyoma</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <script>
+        import '../styles/style.css';
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="icon" href="/images/image.png">
@@ -17,12 +25,21 @@
     <script src="../lib/main.js"></script>
     <script is:inline src="/lib/easing/easing.min.js"></script>
 </head>
+<style is:global>
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+</style>
 <style>
     body {
         background-color: #212121;
     }
 </style>
-<body>
+<body class="overflow-x-hidden">
+    <Header />
+
 	<slot />
+
+    <Footer />
 </body>
 </html>
