@@ -108,8 +108,8 @@
 }
 
 .header .navbar ul li a:hover {
-    color: #00bfff;
-    text-decoration: underline;
+    color: #30C5DC;
+    text-decoration: none;
 }
 
 .header .logo i {
@@ -434,19 +434,7 @@
     /* color:#2f2f2f; */
 }
 
-.team .row .card {
-    height: 22rem;
-    width: 15rem;
-    background-color: #555;
-    text-align: center;
-    margin: 3rem 3rem;
-    position: relative;
-    overflow: hidden;
-    -webkit-box-reflect: below 5px linear-gradient(transparent 70%, #0004);
-    transition: 0.5s;
-}
-
-.team .row .card:hover {
+.team .row .card:hover, .project-container:hover {
     transform: translateY(-10px);
     cursor: pointer;
 }
@@ -519,14 +507,36 @@
     z-index: -1;
 }
 
+.project-container::before, .project-container::after {
+    content: '';
+    border-radius: 50%;
+    height: 13.5rem;
+    width: 13.5rem;
+    z-index: -10;
+}
+
 .team .row .card::before {
-    background: #00bfff;
+    background: #30C5DC;
     top: -3rem;
     right: -4rem;
 }
 
 .team .row .card::after {
-    background: #ccc;
+    background: #333;
+    bottom: -3rem;
+    left: -4rem;
+}
+
+.project-container::before {
+    background: #30C5DC;
+    position: absolute;
+    top: -3rem;
+    right: -4rem;
+}
+
+.project-container::after {
+    background: #333;
+    position: absolute;
     bottom: -3rem;
     left: -4rem;
 }
@@ -900,14 +910,6 @@
         margin-top: 2.5rem;
         text-align: center;
         font-size: 1.25rem;
-    }
-
-    .team {
-        min-height: auto;
-    }
-
-    .team .row {
-        flex-direction: column;
     }
 
     .contact {

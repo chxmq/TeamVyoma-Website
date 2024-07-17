@@ -2,10 +2,11 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
-		colors: {
-			'vyoma-blue': '#30C5DC'
-		}
+		extend: {
+			colors: {
+				'vyoma-blue': '#30C5DC'
+			}
+		},
 	},
 	plugins: [],
 }

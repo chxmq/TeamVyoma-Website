@@ -3,7 +3,7 @@ const { name, src, title, twitter, instagram, linkedin } = Astro.props;
 ---
 
 <div class="row inline-block flex-row items-center justify-center">
-    <div class="card">
+    <div class="card h-[22rem] w-60 text-center bg-neutral-600 m-12 shadow-lg duration-150 overflow-hidden">
         <div class="image flex flex-row justify-center">
             <img
                 src={src}
@@ -11,7 +11,7 @@ const { name, src, title, twitter, instagram, linkedin } = Astro.props;
             />
         </div>
         <div class="flex flex-col gap-4">
-            <h3 class="text-3xl text-white">{name}</h3>
+            <h3 class="text-2xl text-white">{name}</h3>
             <span class="text-base text-neutral-200">{title}</span>
             <div class="flex transition gap-5 justify-center text-base text-white ">
                 <a
