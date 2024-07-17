@@ -2,7 +2,7 @@
 const { name, src, title, twitter, instagram, linkedin } = Astro.props;
 ---
 
-<div class="row">
+<div class="row inline-block flex-row items-center justify-center">
     <div class="card">
         <div class="image flex flex-row justify-center">
             <img
@@ -11,9 +11,9 @@ const { name, src, title, twitter, instagram, linkedin } = Astro.props;
             />
         </div>
         <div class="flex flex-col gap-4">
-            <h3 class="text-5xl text-white">{name}</h3>
-            <span class="text-3xl text-neutral-200">{title}</span>
-            <div class="flex transition gap-5 justify-center text-3xl text-white ">
+            <h3 class="text-3xl text-white">{name}</h3>
+            <span class="text-base text-neutral-200">{title}</span>
+            <div class="flex transition gap-5 justify-center text-base text-white ">
                 <a
                     href={twitter}
                     class="transition hover:text-sky-600 no-underline fab fa-twitter"></a>

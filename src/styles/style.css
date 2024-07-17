@@ -10,18 +10,14 @@
     transition: all .2s linear;
 }
 
-html {
-    font-size: 62.5%;
-}
-
 .heading,
 .section-head h1,
 .section-head-1 h4 {
     margin: 2rem;
     padding-top: 6rem;
     display: inline-block;
-    font-size: 3.5rem;
-    color: #42a5f5;
+    font-size: 2rem;
+    color: #30C5DC;
     position: relative;
     letter-spacing: .2rem;
 }
@@ -62,7 +58,7 @@ html {
     background: white;
     border-style: groove;
     border-color: #002e5f;
-    font-size: 1.5rem;
+    font-size: 1rem;
     cursor: pointer;
     height: 3.5rem;
     width: 15rem;
@@ -90,7 +86,7 @@ html {
 }
 
 .header .logo img {
-    height: 8rem;
+    height: 5rem;
     top: 0;
     left: 0;
 }
@@ -107,7 +103,7 @@ html {
 }
 
 .header .navbar ul li a {
-    font-size: 2rem;
+    font-size: 1.25em;
     color: #fff;
 }
 
@@ -123,20 +119,20 @@ html {
 .header .fa-bars {
     color: #fff;
     cursor: pointer;
-    font-size: 3rem;
+    font-size: 2rem;
     display: none;
 }
 
 .home {
     background-image: url(../images/img1.jpg);
     background-size: cover;
+    background-position: center;
 }
 
 .wave {
     position: absolute;
-    bottom: -.5rem;
+    bottom: 0rem;
     left: 0;
-    height: 11rem;
     width: 100%;
     background: url(../images/darkwave.png);
     background-size: 100rem 11rem;
@@ -165,19 +161,8 @@ html {
     }
 }
 
-.about {
-    min-height: 55vh;
-    width: 100vw;
-    top: -3rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    line-height: 10rem;
-    background-color: #212121;
-}
-
 .about .row {
-    line-height: 4rem;
+    /* line-height: 4rem; */
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -189,18 +174,17 @@ html {
 }
 
 .about .row .content h3 {
-    font-size: 3rem;
-    color: #42a5f5;
+    font-size: 2rem;
 }
 
 .about .row .content p {
-    font-size: 2rem;
+    font-size: 1.25rem;
     color: white;
     padding: 1rem 0;
 }
 
 .pt-5 .container .row .section-head p {
-    font-size: 2rem;
+    font-size: 1.25rem;
     color: white;
     padding: 1rem 0;
 }
@@ -212,7 +196,7 @@ html {
 }
 
 .section-head p {
-    font-size: 20px;
+    font-size: 12px;
     line-height: 28px;
     text-align: center;
 }
@@ -246,7 +230,7 @@ html {
 }
 
 .item h6 {
-    font-size: 2rem;
+    font-size: 1.25rem;
     color: #002e5f;
 }
 
@@ -258,7 +242,7 @@ html {
 }
 
 .item .icon {
-    font-size: 40px;
+    font-size: 25px;
     margin-bottom: 25px;
     color: yellow;
     width: 90px;
@@ -298,7 +282,7 @@ html {
 }
 
 .item p {
-    font-size: 15px;
+    font-size: 9px;
     line-height: 26px;
 }
 
@@ -329,7 +313,7 @@ html {
 }
 
 .counters .counter {
-    font-size: 45px;
+    font-size: 28px;
     margin: 10px 0;
 }
 
@@ -354,7 +338,7 @@ html {
 
 .section-head-1 p {
     color: #333;
-    font-size: 20px;
+    font-size: 12px;
     line-height: 28px;
     text-align: center;
 }
@@ -397,7 +381,7 @@ html {
 }
 
 .item .icon {
-    font-size: 40px;
+    font-size: 25px;
     margin-bottom: 25px;
     color: yellow;
     width: 90px;
@@ -439,7 +423,7 @@ html {
 }
 
 .item p {
-    font-size: 15px;
+    font-size: 9px;
     font-family: "Varela Round", Arial, "Helvetica Neue", Helvetica, sans-serif;
     line-height: 26px;
 }
@@ -450,35 +434,12 @@ html {
     /* color:#2f2f2f; */
 }
 
-.team {
-    min-width: 100vw;
-    min-height: 95vh;
-    text-align: center;
-    background-color: #222;
-}
-
-.team .heading {
-    color: #00bfff;
-}
-
-.team .heading::before,
-.team .heading::after {
-    border-color: #00bfff;
-}
-
-.team .row {
-    display: inline-block;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
 .team .row .card {
-    height: 35rem;
-    width: 25rem;
+    height: 22rem;
+    width: 15rem;
     background-color: #555;
     text-align: center;
-    margin: 5rem 5rem;
+    margin: 3rem 3rem;
     position: relative;
     overflow: hidden;
     -webkit-box-reflect: below 5px linear-gradient(transparent 70%, #0004);
@@ -490,15 +451,14 @@ html {
     cursor: pointer;
 }
 
-
 .team .row .card .image {
     margin: 1rem 0;
-    padding-top: 4rem;
+    padding-top: 2.5rem;
 }
 
 .team .row .card .image img {
-    height: 13rem;
-    width: 13rem;
+    height: 8rem;
+    width: 8rem;
     border-radius: 50%;
     border: .5rem solid #fff;
     box-shadow: 0 0 .5rem rgba(0, 0, 0, .3);
@@ -506,19 +466,19 @@ html {
 }
 
 .team .row .card .info h3 {
-    font-size: 2rem;
+    font-size: 1.25rem;
     color: #002e5f;
 }
 
 .team .row .card .info span {
-    font-size: 1.8rem;
+    font-size: 1.125rem;
     color: #00bfff;
 }
 
 .team .row .card .info .icons a {
     margin-top: 4rem;
     padding-top: 0 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #333;
     align-items: center;
     justify-content: center;
@@ -636,12 +596,12 @@ html {
 
 .contact-form-txt::placeholder {
     color: #aaa;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .contact-form-email::placeholder {
     color: #aaa;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .contact-form-txtarea {
@@ -658,7 +618,7 @@ html {
 
 .contact-form-txtarea::placeholder {
     color: #aaa;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .contact-form-btn {
@@ -669,7 +629,7 @@ html {
     background: white;
     border-style: groove;
     border-color: #002e5f;
-    font-size: 1.5rem;
+    font-size: 1rem;
     cursor: pointer;
     height: 3.5rem;
     width: 15rem;
@@ -697,7 +657,7 @@ html {
 
 .contact-form-phone::placeholder {
     color: #aaa;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .footer {
@@ -822,7 +782,7 @@ html {
 
 .footer .footer-top .footer-newsletter p {
     color: #ffffff;
-    font-size: 14px;
+    font-size: 9px;
 }
 
 .footer .credit,
@@ -842,13 +802,9 @@ html {
 }
 
 @media (max-width: 1000px) {
-    html {
-        font-size: 50%;
-    }
-
     .header .logo img {
         /* width: 20%; */
-        height: 8rem;
+        height: 5rem;
         top: 0;
         left: 0;
         background-size: cover;
@@ -887,7 +843,7 @@ html {
 
     .header .navbar ul li a {
         color: #002e5f;
-        font-size: 2.4rem;
+        font-size: 1.5rem;
     }
 
     .header .fa-times {
@@ -924,12 +880,10 @@ html {
 
     .about .row .content h3 {
         font-size: 2rem;
-        color: var(--color);
     }
 
     .about .row .content p {
-        font-size: 1.3rem;
-        color: #333;
+        font-size: 0.875rem;
         padding: 1rem 0;
     }
 
@@ -945,7 +899,7 @@ html {
         padding-bottom: 10px;
         margin-top: 2.5rem;
         text-align: center;
-        font-size: 2rem;
+        font-size: 1.25rem;
     }
 
     .team {
@@ -1021,12 +975,12 @@ html {
 
     .contact-form-txt::placeholder {
         color: #aaa;
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .contact-form-email::placeholder {
         color: #aaa;
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .contact-form-txtarea {
@@ -1043,7 +997,7 @@ html {
 
     .contact-form-txtarea::placeholder {
         color: #aaa;
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .contact-form-btn {
@@ -1054,7 +1008,7 @@ html {
         background: white;
         border-style: groove;
         border-color: #002e5f;
-        font-size: 1.5rem;
+        font-size: 1rem;
         cursor: pointer;
         height: 3.5rem;
         width: 12rem;
@@ -1082,6 +1036,6 @@ html {
 
     .contact-form-phone::placeholder {
         color: #aaa;
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 }
