@@ -5,25 +5,35 @@ import { achievements } from "../lib/achievements";
 ---
 
 <Layout>
-	<section id="home" class="flex flex-col flex-wrap justify-center items-center text-center overflow-hidden py-4 min-h-screen w-full text-white home">
-		<h1 class="text-7xl drop-shadow-lg">TEAM VYOMA</h1>
+	<section
+		id="home"
+		class="flex flex-col flex-wrap justify-center items-center text-center overflow-hidden py-4 min-h-screen w-full text-white home"
+	>
+		<h1 class="text-7xl drop-shadow-lg text-neutral-200">TEAM VYOMA</h1>
 		<h2 class="text-3xl drop-shadow-md">Aeromodelling Club of RVCE</h2>
 		<div class="h-32 wave"></div>
 		<div class="h-32 wave wave2"></div>
 		<div class="h-32 wave wave3"></div>
 	</section>
 
-	<div class="pt-5 pb-5" style="background-color: #212121;">
+	<div class="pt-5 pb-5">
+		<div class="container">
+			<div class="row">
+				<div class="section-head col-sm-12" id="service">
+					<h1>VISION</h1>
+					<p>To foster innovation and creativity in the field of aeromodelling</p>
+
+					<a class="text-[#406E9F] hover:text-vyoma-blue hover:no-underline text-2xl" href="/about">Learn More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <div class="pt-5 pb-5">
 		<div class="container">
 			<div class="row">
 				<div class="section-head col-sm-12" id="service">
 					<h1>PROJECTS</h1>
-					<p>
-						We help you to build high-quality digital solutions and
-						products as well as deliver a wide range of related
-						professional services. We are providing world-class
-						service to our clients.
-					</p>
 				</div>
 				<div class="col-lg-4 col-sm-6">
 					<div class="item">
@@ -63,9 +73,9 @@ import { achievements } from "../lib/achievements";
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
-	<div class="pt-5 pb-5">
+	<div class="pt-5 pb-5 -mt-20">
 		<div class="container">
 			<div class="row">
 				<div
@@ -77,21 +87,30 @@ import { achievements } from "../lib/achievements";
 					</h4>
 				</div>
 
-				{achievements.map((achievement) => 
-					<Achievement
-						src={achievement.src}
-						heading={achievement.heading}
-					>
-						{achievement.description}
-					</Achievement>
-				)}
+				{
+					achievements.map((achievement) => (
+						<Achievement
+							src={achievement.src}
+							heading={achievement.heading}
+						>
+							{achievement.description}
+						</Achievement>
+					))
+				}
 			</div>
 		</div>
 	</div>
 
-	<div class="text-center items-center bg-[url(../images/bg2.png)] bg-no-repeat bg-cover bg-fixed text-white min-h-[35vh] px-5 py-10">
-		<h3 class="mt-12 text-3xl">Get in touch with us</h3>
-		<a href="#contact" class="hover:text-sky-600"><button class="bg-white text-base cursor-pointer h-14 w-60 shadow-md rounded-full border-indigo-950 text-indigo-950 hover:text-sky-500">Contact Now</button></a>
+	<div
+		class="text-center items-center bg-[url(../images/bg2.png)] bg-no-repeat bg-cover bg-fixed text-white min-h-[35vh] px-5 py-10"
+	>
+		<!-- <h3 class="mt-12 text-3xl">Get in touch with us</h3>
+		<a href="#contact" class="hover:text-sky-600"
+			><button
+				class="bg-white text-base cursor-pointer h-14 w-60 shadow-md rounded-full border-indigo-950 text-indigo-950 hover:text-sky-500"
+				>Contact Now</button
+			></a
+		> -->
 	</div>
 
 	<section id="contact" class="contact">
