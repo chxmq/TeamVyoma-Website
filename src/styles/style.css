@@ -5,6 +5,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Spaceboards';
+    src: url('/css/fonts/aeronaut.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     font-family: 'Aeronaut', sans-serif;
     transition: all .2s linear;
@@ -809,7 +816,7 @@
     }
 
     .header .navbar ul li {
-        margin: 1rem 0;
+        margin: 0.5rem 0;
     }
 
     .header .navbar ul li a {

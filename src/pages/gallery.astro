@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { galleryImages } from "../lib/gallery";
+---
+
+<Layout>
+    <section class="min-h-screen text-center team m-4 p-4 mt-16">
+        <h1 class="pt-24 text-5xl text-vyoma-blue">Gallery</h1>
+        <p></p>
+
+        <div>
+            {
+                galleryImages.map((image) => (
+                    <img
+                        src={image.src}
+                        alt={image.desc}
+                        class="inline-block w-96 h-72 flex-row p-4 object-cover"
+                    />
+                ))
+            }
+        </div>
+    </section>
+</Layout>

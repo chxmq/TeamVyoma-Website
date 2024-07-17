@@ -1,0 +1,28 @@
+---
+import Achievement from "../components/Achievement.astro";
+import Layout from "../layouts/Layout.astro";
+import { achievements } from "../lib/achievements";
+---
+
+<Layout>
+    <section class="min-h-screen pt-5 pb-5 mt-16">
+		<div class="container">
+			<div class="row flex flex-col justify-center items-center">
+                <h1 class="pt-10 text-5xl text-vyoma-blue">Achievements</h1>
+
+				<div class="flex mt-5">
+                    {
+                        achievements.map((achievement) => (
+                            <Achievement
+                                src={achievement.src}
+                                heading={achievement.heading}
+                            >
+                                {achievement.description}
+                            </Achievement>
+                        ))
+                    }
+                </div>
+			</div>
+		</div>
+	</div>
+</Layout>

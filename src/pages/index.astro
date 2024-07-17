@@ -9,7 +9,7 @@ import { achievements } from "../lib/achievements";
 		id="home"
 		class="flex flex-col flex-wrap justify-center items-center text-center overflow-hidden py-4 min-h-screen w-full text-white home"
 	>
-		<h1 class="text-7xl drop-shadow-lg text-neutral-200">TEAM VYOMA</h1>
+		<h1 style="font-family: Spaceboards" class="font-bold text-7xl text-neutral-200 drop-shadow-[0_5.5px_5.5px_rgba(0,0,0,0.8)]">TEAM VYOMA</h1>
 		<h2 class="text-3xl drop-shadow-md">Aeromodelling Club of RVCE</h2>
 		<div class="h-32 wave"></div>
 		<div class="h-32 wave wave2"></div>
@@ -20,97 +20,26 @@ import { achievements } from "../lib/achievements";
 		<div class="container">
 			<div class="row">
 				<div class="section-head col-sm-12" id="service">
-					<h1>VISION</h1>
-					<p>To foster innovation and creativity in the field of aeromodelling</p>
+					<h1 class="mt-32">VISION</h1>
+					<p>
+						To foster innovation and creativity in the field of
+						aeromodelling
+					</p>
 
-					<a class="text-[#406E9F] hover:text-vyoma-blue hover:no-underline text-2xl" href="/about">Learn More</a>
+					<a
+						class="text-[#406E9F] hover:text-vyoma-blue hover:no-underline text-2xl"
+						href="/about">Learn More</a
+					>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<!-- <div class="pt-5 pb-5">
-		<div class="container">
-			<div class="row">
-				<div class="section-head col-sm-12" id="service">
-					<h1>PROJECTS</h1>
-				</div>
-				<div class="col-lg-4 col-sm-6">
-					<div class="item">
-						<span class="icon feature_box_col_one"
-							><i class="fa fa-arrow-up"></i></span
-						>
-						<h6>Fixed-Wing VTOL</h6>
-						<p>
-							An efficient aircraft capable of taking off and
-							landing in difficult terrain
-						</p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6">
-					<div class="item">
-						<span class="icon feature_box_col_two"
-							><i class="fa fa-fighter-jet"></i></span
-						>
-						<h6>RC Planes</h6>
-						<p>
-							Remote-controlled model airplanes, controlled by
-							radio signals
-						</p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6">
-					<div class="item">
-						<span class="icon feature_box_col_three"
-							><i class="fa fa-plane"></i></span
-						>
-						<h6>RC Plane Launcher</h6>
-						<p>
-							A system to launch RC airplanes, making hand
-							launches obsolete
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
-	<div class="pt-5 pb-5 -mt-20">
-		<div class="container">
-			<div class="row">
-				<div
-					class="section-head-1 col-sm-12"
-					style="text-align: center;"
-				>
-					<h4 style="margin-top: -5rem;" id="achievements">
-						ACHIEVEMENTS
-					</h4>
-				</div>
-
-				{
-					achievements.map((achievement) => (
-						<Achievement
-							src={achievement.src}
-							heading={achievement.heading}
-						>
-							{achievement.description}
-						</Achievement>
-					))
-				}
-			</div>
-		</div>
-	</div>
-
-	<div
-		class="text-center items-center bg-[url(../images/bg2.png)] bg-no-repeat bg-cover bg-fixed text-white min-h-[35vh] px-5 py-10"
+	<div class="flex flex-row w-full justify-center">
+		<div
+		class="rounded-lg text-center items-center bg-[url(../images/newerbg.jpg)] bg-no-repeat bg-cover bg-fixed max-w-screen-lg w-full text-white min-h-[35vh] px-5 py-10"
 	>
-		<!-- <h3 class="mt-12 text-3xl">Get in touch with us</h3>
-		<a href="#contact" class="hover:text-sky-600"
-			><button
-				class="bg-white text-base cursor-pointer h-14 w-60 shadow-md rounded-full border-indigo-950 text-indigo-950 hover:text-sky-500"
-				>Contact Now</button
-			></a
-		> -->
+	</div>
 	</div>
 
 	<section id="contact" class="contact">
