@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vyoma.shrishdeshpande.com/sitemap-index.xml

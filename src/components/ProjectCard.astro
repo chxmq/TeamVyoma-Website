@@ -1,9 +1,10 @@
 ---
-const { name, image, reversed } = Astro.props;
+const { name, image, slug, reversed } = Astro.props;
 ---
 
-<div
-    class={`relative project-container overflow-hidden flex flex-col max-sm:flex-col items-center max-w-screen-lg w-full bg-neutral-600 rounded-lg shadow-md text-white`}
+<a
+    class={`hover:no-underline relative project-container overflow-hidden flex flex-col max-sm:flex-col items-center max-w-screen-lg w-full bg-neutral-600 rounded-lg shadow-md text-white`}
+    href={`/projects/${slug}`}
 >
     <h3 class="mt-4 drop-shadow text-white text-3xl font-semibold">
         {name}
@@ -21,4 +22,4 @@ const { name, image, reversed } = Astro.props;
             <slot />
         </div>
     </div>
-</div>
+</a>
