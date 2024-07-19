@@ -14,15 +14,21 @@ const { name, src, title, twitter, instagram, linkedin } = Astro.props;
             <h3 class="text-2xl text-white">{name}</h3>
             <span class="text-base text-neutral-200">{title}</span>
             <div class="flex transition gap-5 justify-center text-base text-white ">
-                <a
-                    href={twitter}
-                    class="transition hover:text-sky-600 no-underline fab fa-twitter"></a>
-                <a
-                    href={instagram}
-                    class="transition hover:text-sky-600 no-underline fab fa-instagram"></a>
-                <a
-                    href={linkedin}
-                    class="transition hover:text-sky-600 no-underline fab fa-linkedin"></a>
+                { twitter && (
+                    <a
+                        href={twitter}
+                        class="transition hover:text-sky-600 no-underline fab fa-twitter"></a>
+                )}
+                { instagram && (
+                    <a
+                        href={instagram}
+                        class="transition hover:text-sky-600 no-underline fab fa-instagram"></a>
+                )}
+                { linkedin && (
+                    <a
+                        href={linkedin}
+                        class="transition hover:text-sky-600 no-underline fab fa-linkedin"></a>
+                )}
             </div>
         </div>
     </div>
