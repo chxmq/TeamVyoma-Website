@@ -1,7 +1,5 @@
 ---
-import Achievement from "../components/Achievement.astro";
 import Layout from "../layouts/Layout.astro";
-import { achievements } from "../lib/achievements";
 ---
 
 <Layout>
@@ -9,12 +7,16 @@ import { achievements } from "../lib/achievements";
 		id="home"
 		class="relative flex flex-col flex-wrap justify-center items-center text-center overflow-hidden py-4 min-h-screen w-full text-white home"
 	>
-		<h1
+		<!-- <h1
 			style="font-family: Spaceboards"
 			class="font-bold text-7xl text-neutral-200 drop-shadow-[0_5.5px_5.5px_rgba(0,0,0,0.8)]"
 		>
 			TEAM VYOMA
-		</h1>
+		</h1> -->
+		<div class="two-images relative max-sm:max-w-sm sm:max-w-screen-sm h-auto">
+			<img class="relative top-0 left-0 w-auto h-auto" src="/images/white_logo.png" alt="White Logo" />
+			<img class="absolute top-0 left-0 w-full h-full superimposed" src="/images/image.png"  alt="Logo" />
+		</div>
 		<h2 class="text-3xl drop-shadow-md">Aeromodelling Club of RVCE</h2>
 		<div class="h-32 wave"></div>
 		<div class="h-32 wave wave2"></div>
