@@ -4,7 +4,7 @@ const { heading, src } = Astro.props;
 
 <div class="col-lg-4 col-sm-6 my-2">
     <div class="item">
-        <div class="flex justify-center"><img
+        <div class="flex justify-center h-40"><img
             style="width: 250px"
             src={src}
             alt={heading}
@@ -12,7 +12,7 @@ const { heading, src } = Astro.props;
 
         <h6 class="text-2xl text-vyoma-blue my-3">{heading}</h6>
 
-        <p class="text-base text-white text-left">
+        <p class="flex-1 text-base text-white text-left">
             <slot />
         </p>
     </div>
