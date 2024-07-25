@@ -5,6 +5,6 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://vyoma.shrishdeshpande.com',
+  site: 'https://teamvyoma.in',
   integrations: [tailwind(), sitemap()]
 });
