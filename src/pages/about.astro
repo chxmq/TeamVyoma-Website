@@ -4,8 +4,11 @@ import { galleryImages } from "../lib/gallery";
 ---
 
 <Layout>
-    <section id="about" class="about flex flex-col items-center min-h-screen">
-		<img src="/images/image.png" class="max-sm:max-w-sm max-sm:mt-24 sm:max-w-screen-sm sm:mt-12 w-fit p-4" />
+	<section id="about" class="about flex flex-col items-center min-h-screen">
+		<img
+			src="/images/image.png"
+			class="max-sm:max-w-sm max-sm:mt-24 sm:max-w-screen-sm sm:mt-12 w-fit p-4"
+		/>
 
 		<div class="row flex justify-around leading-10 sm:-mt-32 max-sm:-mt-24">
 			<div class="content flex flex-col">
@@ -39,18 +42,98 @@ import { galleryImages } from "../lib/gallery";
 
 				<hr class="h-px my-8 bg-gray-200 border-0" />
 
+				<h3 class="text-vyoma-blue">History</h3>
 
-				<!-- <h3 class="text-vyoma-blue">Gallery</h3>
-
-				<div>
-					{galleryImages.map((image) => 
-						<img
-							src={image.src}
-							alt={image.desc}
-							class="inline-block w-96 h-72 flex-row p-4 object-cover"
-						/>
-					)}
-				</div> -->
+				<p class="leading-8 text-left">
+					Team Vyoma was founded in 2007 by a group of seven students.
+					Our big breakthrough occured when we took part in an
+					international aerodesign competition in the USA, organized
+					by the Society of Automotive Engineers (SAE). Our first
+					project, Vyoma-I, was a success, and we ranked 18th out of
+					40 teams that participated in the event.
+				</p>
+				<!-- // embed the video https://www.youtube.com/watch?v=fvLBWQWJb3s -->
+				<div class="flex flex-row justify-center">
+					<iframe
+						width="560"
+						height="315"
+						src="https://www.youtube.com/embed/fvLBWQWJb3s"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</div>
+				<p class="leading-8 text-left">
+					Vyoma-II was our next project for the 2009 SAE Aero Design
+					competition. We went on to secure the 20th position out of
+					43 teams that participated. We also showcased our aircraft
+					at the 2011 Times Auto Expo at Palace Grounds, Bangalore.
+				</p>
+				<!-- // embed the video https://www.youtube.com/watch?v=OCySn5WkKhQ -->
+				<div class="flex flex-row justify-center">
+					<iframe
+						width="560"
+						height="315"
+						src="https://www.youtube.com/embed/OCySn5WkKhQ"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</div>
+				<p class="leading-8 text-left">
+					In 2011, our next project Vyoma-III ranked 8th out of 17
+					teams in the SAE Aero Design competition. We were also
+					awarded a certificate of appreciation for being the first
+					and only team to represent India at the event by none other
+					than then President of India, Smt. Pratibha Devsingh Patil.
+					We showcased our aircraft at the 2009 and 2010 IIT-Madras
+					Shaastra fests too.
+				</p>
+				<p class="leading-8 text-left">
+					In 2013, we won the NASA Systems Engineering Award at the
+					SAE Aero Design West competition - the best among 75 teams
+					from around the world. We received a $750 cash prize as well
+					as a trophy from NASA. Our UAV was also featured as one of
+					the top 24 innovations in the country by ET Now.
+				</p>
+				<p class="leading-8 text-left">
+					In 2015, Team Vyoma participated in the 2015
+					Design/Build/Fly (DBF) event at Tucson, Arizon. We were
+					officially the first Indian team to take off at an AIAA DBF
+					event. Our entry was featured by some of the top newspapers
+					in the country. The year concluded with us securing 4th
+					place among 26 teams at the Sparkfun Autonomous Vehicle
+					Competition at Niwot, Colorado. We presented
+					V.E.N.G.E.A.N.C.E., capable of object detection and
+					avoidance and autonomous navigation (without using GPS!). We
+					were once again the only Indian team selected for the event.
+				</p>
+				<p class="leading-8 text-left">
+					In 2018, we participated in the 2018 Design/Build/Fly (DBF)
+					competition, requiring us to design a dual-purpose regional
+					and business aircraft. Our design report was graded 10th
+					globally.
+				</p>
+				<div class="flex flex-col items-center gap-2">
+					<img src="/images/aircraft_2018.jpg" class="max-w-sm" />
+					<span class="text-white">Our 2018 DBF aircraft</span>
+				</div>
+				<p class="leading-8 text-left">
+					In 2019, we participated in the 2019 DBF competition, where
+					our design proposal placed 13th out of 140 international
+					teams. This year the competition was more challenging as it
+					required us to build a multi-purpose aircraft that simulates
+					carrier operations.
+				</p>
+				<p class="leading-8 text-left">
+					Over the coming years, we have continued to participate in
+					these competitions. We participated in DBF 2020 and 2021,
+					even though the events were held virtually due to the
+					COVID-19 pandemic. That brings us to the present day. We
+					would not have been able to achieve all this without the
+					support of our college, our sponsors, and our crowd-funding
+					campaigns.
+				</p>
 			</div>
 		</div>
 	</section>
