@@ -54,7 +54,7 @@ export const teamMembers = [
 		src: "/images/team/siddharth.JPG",
 		title: "Web Development Head",
 		twitter: null,
-		instagram: "https://instagram.com",
+		instagram: null,
 		linkedin: "https://www.linkedin.com/in/siddharth-varshney-385a42244/",
 	},
 	{
@@ -62,7 +62,7 @@ export const teamMembers = [
 		src: "/images/team/ashrith.jpeg",
 		title: "Sponsorship Head",
 		twitter: null,
-		instagram: null,
+		instagram: "https://www.instagram.com/ashxfly/",
 		linkedin: "https://www.linkedin.com/in/ashrithjain/",
 	},
 	{
