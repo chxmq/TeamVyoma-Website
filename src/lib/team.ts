@@ -1,14 +1,14 @@
 export const teamMembers = [
   {
     name: "Vihaan Snuhith",
-    src: "/public/images/team/Vihaan.jpg",
+    src: "/images/team/Vihaan.jpg",
     title: "Team Lead & Design Head",
     twitter: null,
     linkedin: "https://www.linkedin.com/in/vihaan-snuhith-015714212/",
   },
   {
     name: "Likith A Nayaka",
-    src: "public/images/team/Likith.jpg",
+    src: "/images/team/Likith.jpg",
     title: "Team Vice Lead & Manufacturing Head",
     twitter: null,
     instagram: null,
@@ -16,7 +16,7 @@ export const teamMembers = [
   },
   {
     name: "Rahul OM",
-    src: "public/images/team/Rahul.jpg",
+    src: "/images/team/Rahul.jpg",
     title: "Aerodynamics Head",
     twitter: null,
     instagram: null,
@@ -24,7 +24,7 @@ export const teamMembers = [
   },
   {
     name: "Sarthak Sharma",
-    src: "public/images/team/Sarthak.jpg",
+    src: "/images/team/Sarthak.jpg",
     title: "Avionics Head",
     twitter: null,
     instagram: null,
@@ -32,7 +32,7 @@ export const teamMembers = [
   },
   {
     name: "S Venkatesh Shenoy",
-    src: "public/images/team/Venkatesh.jpg",
+    src: "/images/team/Venkatesh.jpg",
     title: "Flight Test Head",
     twitter: null,
     instagram: null,
@@ -56,7 +56,7 @@ export const teamMembers = [
   },
   {
     name: "Yash Saraogi",
-    src: "public/images/team/Yash.png",
+    src: "/images/team/Yash.png",
     title: "Web Development Head",
     twitter: null,
     instagram: null,
@@ -64,15 +64,15 @@ export const teamMembers = [
   },
   {
     name: "Kanish",
-    src: "public/images/team/Kanish.png",
+    src: "/images/team/Kanish.png",
     title: "Finance Head",
     twitter: null,
     instagram: null,
-    linkedin: "https://www.linkedin.com/in/b-l-kanish-699b032b7/",
+    linkedin: "https://www.linkedin.com/in/b-l-kanish-699b332b7/",
   },
   {
     name: "Tushar Mongia",
-    src: "public/images/team/Tushar.png",
+    src: "/images/team/Tushar.png",
     title: "Sponsorship Head",
     twitter: null,
     instagram: null,
