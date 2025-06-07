@@ -1,30 +1,166 @@
 ---
-import ProjectCard from "../../components/ProjectCard.astro";
 import Layout from "../../layouts/Layout.astro";
 ---
 
-<Layout>
-    <section class="flex flex-col relative min-h-screen m-4 mt-16 gap-16 items-center p-4">
-        <h1 class="pt-24 text-5xl text-vyoma-blue">Projects</h1>
+<Layout title="Projects - Team Vyoma" description="Explore Team Vyoma's innovative aerospace projects including RC aircraft, VTOL systems, and advanced UAV technologies.">
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="hero-content">
+            <h1>Our Projects</h1>
+            <p>Innovative aerospace solutions pushing the boundaries of flight</p>
+        </div>
+    </section>
 
-        <div class="flex flex-col gap-16">
-            <ProjectCard name="RC Model Airplanes" image="/images/rcairplane.jpg" slug="model">
-                <p>We design and builds radio-controlled (RC) model airplanes for competitions and recreational flying.</p>
-    
-                <p>We use advanced materials and manufacturing techniques to optimize the performance of our aircraft.</p>
-            </ProjectCard>
+    <!-- Projects Section -->
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">Engineering Excellence</h2>
+            <p class="section-subtitle">
+                From concept to flight - explore our cutting-edge aerospace projects
+            </p>
+        </div>
+        
+        <div class="project-card">
+            <div class="project-content">
+                <img src="/images/rcairplane.jpg" alt="RC Model Airplanes" class="project-image" />
+                <div class="project-info">
+                    <h3>RC Model Airplanes</h3>
+                    <p>Advanced radio-controlled aircraft designed for competitions and research applications. Our models incorporate state-of-the-art aerodynamics, lightweight materials, and precision engineering.</p>
+                    <p>We've achieved top rankings in national competitions including the Boeing National Aeromodelling Competition, showcasing our commitment to engineering excellence and innovation.</p>
+                    <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                        <a href="/projects/model" class="btn btn-primary">
+                            <i class="fas fa-info-circle"></i>
+                            Learn More
+                        </a>
+                        <a href="/gallery" class="btn btn-secondary">
+                            <i class="fas fa-images"></i>
+                            View Gallery
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <div class="project-content reverse">
+                <div class="project-info">
+                    <h3>Fixed-Wing VTOL</h3>
+                    <p>Revolutionary vertical takeoff and landing aircraft that combines the efficiency of fixed-wing flight with the versatility of helicopter-like operations.</p>
+                    <p>This innovative design enables operations in confined spaces while maintaining the speed and range advantages of traditional aircraft. Perfect for surveillance, delivery, and research applications.</p>
+                    <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                        <a href="/projects/vtol" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i>
+                            Explore Project
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i>
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+                <img src="/images/vtol.jpg" alt="Fixed-Wing VTOL" class="project-image" />
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <div class="project-content">
+                <img src="/images/rclauncher.jpg" alt="RC Airplane Launcher" class="project-image" />
+                <div class="project-info">
+                    <h3>RC Airplane Launcher</h3>
+                    <p>Precision launching system designed to provide consistent and reliable aircraft deployment. This innovative device eliminates the unpredictability of hand launches.</p>
+                    <p>Our launcher ensures optimal launch angles and velocities, significantly improving flight success rates and reducing the skill barrier for new pilots.</p>
+                    <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                        <a href="/projects/launcher" class="btn btn-primary">
+                            <i class="fas fa-cog"></i>
+                            Technical Details
+                        </a>
+                        <a href="/team" class="btn btn-secondary">
+                            <i class="fas fa-users"></i>
+                            Meet the Team
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <ProjectCard name="Fixed-Wing VTOL" image="/images/vtol.jpg" slug="vtol" reversed>
-                <p>A vertical takeoff and landing (VTOL) aircraft that can transition between hovering and forward flight.</p>
-    
-                <p>It is designed to be a versatile platform for various applications, including aerial photography, surveillance, and package delivery.</p>
-            </ProjectCard>
+    <!-- Technology Section -->
+    <section class="section" style="background: white;">
+        <div class="section-header">
+            <h2 class="section-title">Our Technologies</h2>
+            <p class="section-subtitle">
+                Advanced systems and methodologies powering our aerospace innovations
+            </p>
+        </div>
+        
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-wind"></i>
+                </div>
+                <h3>Aerodynamics</h3>
+                <p>Advanced computational fluid dynamics and wind tunnel testing to optimize aircraft performance and efficiency.</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <h3>Avionics</h3>
+                <p>Cutting-edge flight control systems, sensors, and autonomous navigation technologies for reliable operation.</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-cube"></i>
+                </div>
+                <h3>Materials</h3>
+                <p>Lightweight composite materials and advanced manufacturing techniques for optimal strength-to-weight ratios.</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>Autonomy</h3>
+                <p>Machine learning and AI-powered systems for autonomous flight, obstacle avoidance, and mission planning.</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Manufacturing</h3>
+                <p>Precision manufacturing processes including 3D printing, CNC machining, and composite fabrication.</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Testing</h3>
+                <p>Comprehensive testing protocols including simulation, ground testing, and flight validation for safety and performance.</p>
+            </div>
+        </div>
+    </section>
 
-            <ProjectCard name="RC Airplane Launcher" image="/images/rclauncher.jpg" slug="launcher">
-                <p>A device that launches RC model airplanes into the air with ease.</p>
-    
-                <p>It is designed to provide a consistent and reliable launch. Compared to hand launching, it is less difficult and unpredictable.</p>
-            </ProjectCard>
+    <!-- Call to Action -->
+    <section class="section" style="background: linear-gradient(135deg, #0066cc 0%, #30c5dc 100%); color: white; text-align: center;">
+        <div style="max-width: 600px; margin: 0 auto;">
+            <h2 style="color: white; font-size: 2.5rem; margin-bottom: 1rem;">Ready to Innovate?</h2>
+            <p style="font-size: 1.25rem; margin-bottom: 2rem; color: rgba(255, 255, 255, 0.9);">
+                Join us in pushing the boundaries of aerospace technology. Whether you're a student, researcher, or industry professional, there's a place for you in our mission.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="/team" class="btn" style="background: white; color: var(--primary-blue);">
+                    <i class="fas fa-users"></i>
+                    Join Our Team
+                </a>
+                <a href="#contact" class="btn" style="background: rgba(255, 255, 255, 0.2); color: white; border: 2px solid white;">
+                    <i class="fas fa-handshake"></i>
+                    Collaborate With Us
+                </a>
+            </div>
         </div>
     </section>
 </Layout>

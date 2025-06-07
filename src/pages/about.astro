@@ -1,138 +1,163 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { galleryImages } from "../lib/gallery";
 ---
 
-<Layout>
-	<section id="about" class="about flex flex-col items-center min-h-screen">
-		<img
-			src="/images/image.png"
-			class="max-sm:max-w-sm max-sm:mt-24 sm:max-w-screen-sm sm:mt-12 w-fit p-4"
-		/>
+<Layout title="About Us - Team Vyoma" description="Learn about Team Vyoma's journey, mission, and achievements in aerospace engineering and aeromodelling.">
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="hero-content">
+            <h1>About Team Vyoma</h1>
+            <p>Pioneering aerospace innovation since 2007</p>
+        </div>
+    </section>
 
-		<div class="row flex justify-around leading-10 sm:-mt-32 max-sm:-mt-24">
-			<div class="content flex flex-col">
-				<hr class="h-px my-8 bg-gray-200 border-0" />
+    <!-- Mission Section -->
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">Our Mission</h2>
+            <p class="section-subtitle">
+                To develop state-of-the-art technologies in autonomous robotics and accelerate 
+                the growth of the aerospace domain through innovation and education
+            </p>
+        </div>
+        
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>Research & Development</h3>
+                <p>Conducting cutting-edge research in unmanned aerial vehicles and autonomous systems to push the boundaries of aerospace technology.</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Education & Outreach</h3>
+                <p>Inspiring young minds through workshops, competitions, and educational programs to foster the next generation of aerospace engineers.</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Global Impact</h3>
+                <p>Representing India in international competitions and collaborating with global institutions to advance aerospace technology worldwide.</p>
+            </div>
+        </div>
+    </section>
 
-				<h3 class="text-vyoma-blue">Who We Are</h3>
-				<p class="mx-2">
-					We are the aero-design team of RV College of Engineering.
-					Started in 2007, we are one of the leading student projects
-					in India, having won many national and international
-					competitions and awards such as the NASA Systems Engineering
-					Award.
-				</p>
-				<h3 class="text-vyoma-blue">What We Do</h3>
-				<p class="mx-2">
-					Carry out cutting edge research for development of Unmanned
-					Aerial Vehicles. Ignite inquisitiveness and interest in
-					young minds in Aerospace Engineering and help them along
-					that path. Represent our country in numerous International
-					competitions like SAE Aero-design, AIAA Design Build Fly &
-					IMAV.
-				</p>
-				<h3 class="text-vyoma-blue">Our Mission</h3>
-				<p class="mx-2">
-					To develop state of the art technologies in the field
-					Autonomous Robotics, to accelerate the growth of the
-					Aerospace domain by conceiving a Societal Drone Era, to
-					Carry out R&D in Unmanned Aerial Vehicles, to perform custom
-					advanced missions for societal use.
-				</p>
+    <!-- History Section -->
+    <section class="section" style="background: white;">
+        <div class="section-header">
+            <h2 class="section-title">Our Journey</h2>
+            <p class="section-subtitle">
+                From humble beginnings to international recognition - the story of Team Vyoma
+            </p>
+        </div>
+        
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div class="card" style="margin-bottom: 2rem;">
+                <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">2007 - The Beginning</h3>
+                <p>Team Vyoma was founded by seven passionate students with a vision to excel in aerospace engineering. Our journey began with a simple dream - to build aircraft that could compete on the world stage.</p>
+            </div>
+            
+            <div class="card" style="margin-bottom: 2rem;">
+                <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">2008-2009 - First International Success</h3>
+                <p>Our breakthrough came when we participated in the SAE Aero Design competition in the USA. Vyoma-I achieved 18th place out of 40 international teams, marking India's entry into competitive aeromodelling.</p>
+            </div>
+            
+            <div class="card" style="margin-bottom: 2rem;">
+                <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">2013 - NASA Recognition</h3>
+                <p>A milestone year when we won the prestigious NASA Systems Engineering Award at SAE Aero Design West, competing against 75 teams from around the world. This achievement put us on the global aerospace map.</p>
+            </div>
+            
+            <div class="card" style="margin-bottom: 2rem;">
+                <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">2015 - AIAA DBF Pioneers</h3>
+                <p>We became the first Indian team to successfully take off at an AIAA Design/Build/Fly event in Tucson, Arizona. Our autonomous vehicle V.E.N.G.E.A.N.C.E. secured 4th place at the Sparkfun AVC in Colorado.</p>
+            </div>
+            
+            <div class="card">
+                <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">Present Day - Continued Excellence</h3>
+                <p>Today, we continue to push boundaries in aerospace technology, participating in international competitions, conducting research, and inspiring the next generation of engineers through our outreach programs.</p>
+            </div>
+        </div>
+    </section>
 
-				<hr class="h-px my-8 bg-gray-200 border-0" />
+    <!-- Video Section -->
+    <section class="section" style="background: var(--light-gray);">
+        <div class="section-header">
+            <h2 class="section-title">See Us in Action</h2>
+            <p class="section-subtitle">
+                Watch our aircraft in flight and learn about our engineering process
+            </p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+            <div class="card" style="padding: 0; overflow: hidden;">
+                <iframe
+                    style="width: 100%; height: 300px; border: none;"
+                    src="https://www.youtube.com/embed/fvLBWQWJb3s"
+                    title="Team Vyoma Aircraft Flight"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+                <div style="padding: 1.5rem;">
+                    <h3>Vyoma Aircraft Flight Test</h3>
+                    <p>Watch our latest aircraft design in action during flight testing.</p>
+                </div>
+            </div>
+            
+            <div class="card" style="padding: 0; overflow: hidden;">
+                <iframe
+                    style="width: 100%; height: 300px; border: none;"
+                    src="https://www.youtube.com/embed/OCySn5WkKhQ"
+                    title="Team Vyoma Engineering Process"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+                <div style="padding: 1.5rem;">
+                    <h3>Engineering Excellence</h3>
+                    <p>Behind the scenes look at our design and manufacturing process.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				<h3 class="text-vyoma-blue">History</h3>
-
-				<p class="leading-8 text-left mx-2">
-					Team Vyoma was founded in 2007 by a group of seven students.
-					Our big breakthrough occured when we took part in an
-					international aerodesign competition in the USA, organized
-					by the Society of Automotive Engineers (SAE). Our first
-					project, Vyoma-I, was a success, and we ranked 18th out of
-					40 teams that participated in the event.
-				</p>
-				<!-- // embed the video https://www.youtube.com/watch?v=fvLBWQWJb3s -->
-				<div class="flex flex-row justify-center">
-					<iframe
-						class="w-full max-w-screen-sm h-80"
-						src="https://www.youtube.com/embed/fvLBWQWJb3s"
-						title="YouTube video player"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen></iframe>
-				</div>
-				<p class="leading-8 text-left mx-2">
-					Vyoma-II was our next project for the 2009 SAE Aero Design
-					competition. We went on to secure the 20th position out of
-					43 teams that participated. We also showcased our aircraft
-					at the 2011 Times Auto Expo at Palace Grounds, Bangalore.
-				</p>
-				<!-- // embed the video https://www.youtube.com/watch?v=OCySn5WkKhQ -->
-				<div class="flex flex-row justify-center">
-					<iframe
-						class="w-full max-w-screen-sm h-80"
-						src="https://www.youtube.com/embed/OCySn5WkKhQ"
-						title="YouTube video player"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen></iframe>
-				</div>
-				<p class="leading-8 text-left mx-2">
-					In 2011, our next project Vyoma-III ranked 8th out of 17
-					teams in the SAE Aero Design competition. We were also
-					awarded a certificate of appreciation for being the first
-					and only team to represent India at the event by none other
-					than then President of India, Smt. Pratibha Devsingh Patil.
-					We showcased our aircraft at the 2009 and 2010 IIT-Madras
-					Shaastra fests too.
-				</p>
-				<p class="leading-8 text-left mx-2">
-					In 2013, we won the NASA Systems Engineering Award at the
-					SAE Aero Design West competition - the best among 75 teams
-					from around the world. We received a $750 cash prize as well
-					as a trophy from NASA. Our UAV was also featured as one of
-					the top 24 innovations in the country by ET Now.
-				</p>
-				<p class="leading-8 text-left mx-2">
-					In 2015, Team Vyoma participated in the 2015
-					Design/Build/Fly (DBF) event at Tucson, Arizon. We were
-					officially the first Indian team to take off at an AIAA DBF
-					event. Our entry was featured by some of the top newspapers
-					in the country. The year concluded with us securing 4th
-					place among 26 teams at the Sparkfun Autonomous Vehicle
-					Competition at Niwot, Colorado. We presented
-					V.E.N.G.E.A.N.C.E., capable of object detection and
-					avoidance and autonomous navigation (without using GPS!). We
-					were once again the only Indian team selected for the event.
-				</p>
-				<p class="leading-8 text-left mx-2">
-					In 2018, we participated in the 2018 Design/Build/Fly (DBF)
-					competition, requiring us to design a dual-purpose regional
-					and business aircraft. Our design report was graded 10th
-					globally.
-				</p>
-				<div class="flex flex-col items-center gap-2">
-					<img src="/images/aircraft_2018.jpg" class="max-w-sm" />
-					<span class="text-white">Our 2018 DBF aircraft</span>
-				</div>
-				<p class="leading-8 text-left mx-2">
-					In 2019, we participated in the 2019 DBF competition, where
-					our design proposal placed 13th out of 140 international
-					teams. This year the competition was more challenging as it
-					required us to build a multi-purpose aircraft that simulates
-					carrier operations.
-				</p>
-				<p class="leading-8 text-left mx-2">
-					Over the coming years, we have continued to participate in
-					these competitions. We participated in DBF 2020 and 2021,
-					even though the events were held virtually due to the
-					COVID-19 pandemic. That brings us to the present day. We
-					would not have been able to achieve all this without the
-					support of our college, our sponsors, and our crowd-funding
-					campaigns.
-				</p>
-			</div>
-		</div>
-	</section>
+    <!-- Values Section -->
+    <section class="section" style="background: var(--dark-navy); color: white;">
+        <div class="section-header">
+            <h2 class="section-title" style="color: white;">Our Values</h2>
+            <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.9);">
+                The principles that guide everything we do
+            </p>
+        </div>
+        
+        <div class="cards-grid">
+            <div class="card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
+                <div class="card-icon" style="background: var(--accent-orange);">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3 style="color: white;">Innovation</h3>
+                <p style="color: rgba(255, 255, 255, 0.9);">Constantly pushing the boundaries of what's possible in aerospace technology and design.</p>
+            </div>
+            
+            <div class="card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
+                <div class="card-icon" style="background: var(--secondary-blue);">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3 style="color: white;">Collaboration</h3>
+                <p style="color: rgba(255, 255, 255, 0.9);">Working together as a team to achieve goals that no individual could accomplish alone.</p>
+            </div>
+            
+            <div class="card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
+                <div class="card-icon" style="background: var(--accent-orange);">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3 style="color: white;">Excellence</h3>
+                <p style="color: rgba(255, 255, 255, 0.9);">Maintaining the highest standards in everything we do, from design to execution.</p>
+            </div>
+        </div>
+    </section>
 </Layout>

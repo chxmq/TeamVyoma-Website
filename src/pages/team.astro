@@ -1,25 +1,165 @@
 ---
-import TeamMember from "../components/TeamMember.astro";
 import Layout from "../layouts/Layout.astro";
 import { teamMembers } from "../lib/team";
 ---
 
-<Layout>
-    <section class="min-h-screen text-center team m-4 p-4 mt-16">
-		<h1 class="pt-24 text-5xl text-vyoma-blue">Team</h1>
-		<p></p>
+<Layout title="Our Team - Team Vyoma" description="Meet the talented engineers and innovators behind Team Vyoma's aerospace achievements.">
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="hero-content">
+            <h1>Our Team</h1>
+            <p>Meet the passionate engineers driving aerospace innovation</p>
+        </div>
+    </section>
 
-		{
-			teamMembers.map((member) => (
-				<TeamMember
-					name={member.name}
-					src={member.src}
-					title={member.title}
-					twitter={member.twitter}
-					instagram={member.instagram}
-					linkedin={member.linkedin}
-				/>
-			))
-		}
-	</section>
+    <!-- Team Section -->
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">Leadership Team</h2>
+            <p class="section-subtitle">
+                Dedicated professionals leading the charge in aerospace engineering and innovation
+            </p>
+        </div>
+        
+        <div class="team-grid">
+            {teamMembers.map((member) => (
+                <div class="team-card">
+                    <img 
+                        src={member.src} 
+                        alt={member.name}
+                        class="team-avatar"
+                        onerror="this.src='/images/team/unknown.jpg'"
+                    />
+                    <h3>{member.name}</h3>
+                    <p class="role">{member.title}</p>
+                    <div class="social-links">
+                        {member.twitter && (
+                            <a href={member.twitter} aria-label={`${member.name} Twitter`}>
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        )}
+                        {member.instagram && (
+                            <a href={member.instagram} aria-label={`${member.name} Instagram`}>
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        )}
+                        {member.linkedin && (
+                            <a href={member.linkedin} aria-label={`${member.name} LinkedIn`}>
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        )}
+                    </div>
+                </div>
+            ))}
+        </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section class="section" style="background: white;">
+        <div class="section-header">
+            <h2 class="section-title">Our Departments</h2>
+            <p class="section-subtitle">
+                Specialized teams working together to achieve aerospace excellence
+            </p>
+        </div>
+        
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-drafting-compass"></i>
+                </div>
+                <h3>Design & Engineering</h3>
+                <p>Responsible for aircraft design, CAD modeling, structural analysis, and aerodynamic optimization using cutting-edge software and simulation tools.</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-wind"></i>
+                </div>
+                <h3>Aerodynamics</h3>
+                <p>Focuses on airflow analysis, wing design optimization, and performance enhancement through computational fluid dynamics and wind tunnel testing.</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <h3>Avionics</h3>
+                <p>Develops flight control systems, navigation equipment, and electronic components that ensure safe and reliable aircraft operation.</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-hammer"></i>
+                </div>
+                <h3>Manufacturing</h3>
+                <p>Handles fabrication, assembly, and quality control using advanced manufacturing techniques including 3D printing and composite materials.</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-plane"></i>
+                </div>
+                <h3>Flight Testing</h3>
+                <p>Conducts comprehensive flight tests, performance validation, and safety assessments to ensure aircraft meet design specifications.</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Research & Development</h3>
+                <p>Explores emerging technologies, conducts research projects, and develops innovative solutions for future aerospace applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us Section -->
+    <section class="section" style="background: var(--dark-navy); color: white;">
+        <div class="section-header">
+            <h2 class="section-title" style="color: white;">Join Team Vyoma</h2>
+            <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.9);">
+                Be part of something extraordinary. Join our mission to advance aerospace technology.
+            </p>
+        </div>
+        
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <div class="cards-grid" style="margin-bottom: 3rem;">
+                <div class="card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
+                    <div class="card-icon" style="background: var(--accent-orange);">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 style="color: white;">Students</h3>
+                    <p style="color: rgba(255, 255, 255, 0.9);">Open to passionate engineering students from all disciplines who want to learn and contribute to aerospace innovation.</p>
+                </div>
+                
+                <div class="card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
+                    <div class="card-icon" style="background: var(--secondary-blue);">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 style="color: white;">Innovators</h3>
+                    <p style="color: rgba(255, 255, 255, 0.9);">We welcome creative minds who bring fresh perspectives and innovative solutions to aerospace challenges.</p>
+                </div>
+                
+                <div class="card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
+                    <div class="card-icon" style="background: var(--accent-orange);">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 style="color: white;">Collaborators</h3>
+                    <p style="color: rgba(255, 255, 255, 0.9);">Industry professionals and researchers interested in partnerships and collaborative projects.</p>
+                </div>
+            </div>
+            
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="#contact" class="btn" style="background: white; color: var(--primary-blue);">
+                    <i class="fas fa-envelope"></i>
+                    Get In Touch
+                </a>
+                <a href="/about" class="btn" style="background: rgba(255, 255, 255, 0.2); color: white; border: 2px solid white;">
+                    <i class="fas fa-info-circle"></i>
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </section>
 </Layout>
