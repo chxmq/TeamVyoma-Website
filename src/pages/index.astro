@@ -3,112 +3,196 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<section
-		id="home"
-		class="relative flex flex-col flex-wrap justify-center items-center text-center overflow-hidden py-4 min-h-screen w-full text-white home"
-	>
-		<div class="two-images relative max-sm:max-w-sm sm:max-w-screen-sm h-auto">
-			<img class="relative top-0 left-0 w-auto h-auto" src="/images/white_logo.png" alt="White Logo" />
-			<img class="absolute top-0 left-0 w-full h-full superimposed" src="/images/image.png"  alt="Logo" />
-		</div>
-		<h2 class="text-3xl drop-shadow-md">Aeromodelling Club of RVCE</h2>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="/images/white_logo.png" alt="Team Vyoma Logo" class="hero-logo" />
+            <h1>Team Vyoma</h1>
+            <p>Pioneering the future of aerospace through innovation, design, and engineering excellence</p>
+            
+            <div class="cta-buttons">
+                <a href="/about" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i>
+                    Discover Our Story
+                </a>
+                <a href="/projects" class="btn btn-secondary">
+                    <i class="fas fa-plane"></i>
+                    View Projects
+                </a>
+            </div>
+        </div>
+    </section>
 
-		<!-- Registration link -->
-		<div class="flex justify-center items-center py-4">
-			<a>
-				Registrations Closed! See you next year ✈️
-			</a>
-		</div>
-		<div class="flex justify-center items-center py-4">
-			<a 
-				href="https://www.instagram.com/teamvyomaofficial/" 
-				class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-				target="_blank" 
-				rel="noopener noreferrer">
-				View Results Here!
-			</a>
-		</div>
-		
-		<div class="h-32 wave"></div>
-		<div class="h-32 wave wave2"></div>
-		<div class="h-32 wave wave3"></div>
-	</section>
+    <!-- Vision Section -->
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">Our Vision</h2>
+            <p class="section-subtitle">
+                To foster innovation and creativity in the field of aeromodelling, 
+                developing cutting-edge UAV technologies for a better tomorrow
+            </p>
+        </div>
+        
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3>Innovation</h3>
+                <p>Pushing the boundaries of aerospace technology through creative problem-solving and cutting-edge research in unmanned aerial systems.</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Collaboration</h3>
+                <p>Building a community of passionate engineers and designers working together to achieve excellence in aeromodelling and UAV development.</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3>Excellence</h3>
+                <p>Striving for perfection in every project, from design conception to final implementation, maintaining the highest standards of quality.</p>
+            </div>
+        </div>
+    </section>
 
-	<div class="pt-5 pb-5">
-		<div class="container">
-			<div class="row">
-				<div class="section-head col-sm-12" id="service">
-					<h1 class="mt-32">VISION</h1>
-					<p>
-						To foster innovation and creativity in the field of
-						aeromodelling
-					</p>
+    <!-- Featured Projects -->
+    <section class="section" style="background: white;">
+        <div class="section-header">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">
+                Explore our latest innovations in aerospace engineering and UAV technology
+            </p>
+        </div>
+        
+        <div class="project-card">
+            <div class="project-content">
+                <img src="/images/rcairplane.jpg" alt="RC Model Airplanes" class="project-image" />
+                <div class="project-info">
+                    <h3>RC Model Airplanes</h3>
+                    <p>Advanced radio-controlled aircraft designed for competitions and research. Our models incorporate cutting-edge aerodynamics and materials science.</p>
+                    <p>We've achieved top rankings in national competitions, showcasing our commitment to engineering excellence.</p>
+                    <a href="/projects/model" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <div class="project-content reverse">
+                <div class="project-info">
+                    <h3>Fixed-Wing VTOL</h3>
+                    <p>Revolutionary vertical takeoff and landing aircraft that combines the efficiency of fixed-wing flight with helicopter-like versatility.</p>
+                    <p>Perfect for surveillance, delivery, and research applications in confined spaces.</p>
+                    <a href="/projects/vtol" class="btn btn-primary">Explore Project</a>
+                </div>
+                <img src="/images/vtol.jpg" alt="Fixed-Wing VTOL" class="project-image" />
+            </div>
+        </div>
+    </section>
 
-					<a
-						class="text-[#406E9F] hover:text-vyoma-blue hover:no-underline text-2xl"
-						href="/about">Learn More</a
-					>
-				</div>
-			</div>
-		</div>
-	</div>
+    <!-- Stats Section -->
+    <section class="section" style="background: linear-gradient(135deg, #0066cc 0%, #30c5dc 100%); color: white;">
+        <div class="section-header">
+            <h2 class="section-title" style="color: white;">Our Impact</h2>
+            <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.9);">
+                Numbers that showcase our journey and achievements in aerospace innovation
+            </p>
+        </div>
+        
+        <div class="cards-grid">
+            <div class="card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
+                <div class="card-icon" style="background: rgba(255, 255, 255, 0.2);">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3 style="color: white; font-size: 2.5rem; margin-bottom: 0.5rem;">17+</h3>
+                <p style="color: rgba(255, 255, 255, 0.9);">Years of Excellence</p>
+            </div>
+            
+            <div class="card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
+                <div class="card-icon" style="background: rgba(255, 255, 255, 0.2);">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h3 style="color: white; font-size: 2.5rem; margin-bottom: 0.5rem;">50+</h3>
+                <p style="color: rgba(255, 255, 255, 0.9);">Awards Won</p>
+            </div>
+            
+            <div class="card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
+                <div class="card-icon" style="background: rgba(255, 255, 255, 0.2);">
+                    <i class="fas fa-plane"></i>
+                </div>
+                <h3 style="color: white; font-size: 2.5rem; margin-bottom: 0.5rem;">100+</h3>
+                <p style="color: rgba(255, 255, 255, 0.9);">Aircraft Built</p>
+            </div>
+        </div>
+    </section>
 
-	<div
-		class="h-10 text-center items-center bg-[url(../images/newbg2.jpg)] bg-no-repeat bg-contain md:bg-cover bg-fixed bg-center w-full text-white min-h-[35vh] px-5 py-10"
-	>
-	</div>
-
-	<section id="contact" class="contact">
-		<h1 class="heading">Get in touch</h1>
-	</section>
-	<div class="contact-in">
-		<div class="contact-map">
-			<iframe
-				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15567.912881370632!2d77.45077965157242!3d12.889661394479894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3ee159ba3729%3A0x75a3463d510cf26e!2sR.%20V.%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1689627383432!5m2!1sen!2sin"
-				width="100%"
-				height="450"
-				style="border: 0"
-				allowfullscreen=""
-				loading="lazy"></iframe>
-		</div>
-		<div class="contact-form">
-			<form action="http://localhost:8001/contactme.php" method="POST">
-				<input
-					type="text"
-					name="name"
-					placeholder="Name"
-					class="contact-form-txt"
-					required
-				/>
-				<input
-					type="tel"
-					id="phone"
-					name="phone"
-					pattern="[0-9]{10}"
-					required
-					placeholder="Contact number"
-					maxlength="10"
-					class="contact-form-phone"
-				/>
-				<input
-					type="email"
-					name="email"
-					placeholder="Email"
-					class="contact-form-email"
-					required
-				/>
-				<textarea
-					placeholder="Your Message"
-					name="message"
-					class="contact-form-txtarea"
-					required></textarea>
-				<input
-					type="submit"
-					value="Submit"
-					name="submit"
-					class="contact-form-btn"
-				/>
-			</form>
-		</div>
-	</div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-content">
+            <div class="contact-info">
+                <h2>Get In Touch</h2>
+                <p>Ready to join our mission or collaborate with us? We'd love to hear from you!</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4 style="color: white; margin-bottom: 0.5rem;">Location</h4>
+                            <p style="opacity: 0.9; margin: 0;">RV College of Engineering, Bangalore</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4 style="color: white; margin-bottom: 0.5rem;">Email</h4>
+                            <p style="opacity: 0.9; margin: 0;">projectvyoma@rvce.edu.in</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h4 style="color: white; margin-bottom: 0.5rem;">Join Us</h4>
+                            <p style="opacity: 0.9; margin: 0;">Open to passionate engineering students</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3 style="color: var(--dark-navy); margin-bottom: 1.5rem;">Send us a message</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required placeholder="Tell us about your interest in aerospace or how you'd like to collaborate..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
 </Layout>
